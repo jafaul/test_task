@@ -7,8 +7,9 @@ from schemas.post import PostCreate
 import redis
 import jwt
 
-
-redis_client = redis.Redis(host="localhost", port=6379, db=0, decode_responses=True)
+print("INFO")
+print(redis.__file__)
+redis_client = redis.Redis(host="redis", port=6379, db=0, decode_responses=True)
 
 
 def add_post(db: Session, post: PostCreate, token: str):

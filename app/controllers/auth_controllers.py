@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
 
-from ..config import config
-from ..models.user import User
-from ..schemas.user import UserCreate
+from config import config
+from models.user import User
+from schemas.user import UserCreate
 from passlib.context import CryptContext
 import jwt
 import datetime

@@ -6,7 +6,7 @@ from controllers.post_controllers import add_post, get_posts, delete_post
 from schemas.post import PostCreate
 
 router = APIRouter()
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/login")
 
 
 @router.post("/")

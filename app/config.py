@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     DB_USERNAME: str = os.environ.get("DB_USERNAME", "")
     DB_PASSWORD: str = os.environ.get("DB_PASSWORD", "")
     DB_HOST: str = os.environ.get("DB_HOST", "db")
-    DB_PORT: int = os.environ.get("DB_PORT", 5434)
+    DB_PORT: int = os.environ.get("DB_PORT", 5432)
     DB_NAME: str = os.environ.get("DB_NAME", "")
 
     SECRET_KEY: str = os.environ.get("SECRET_KEY", "")

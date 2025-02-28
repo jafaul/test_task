@@ -4,8 +4,8 @@ WORKDIR /src
 
 COPY . .
 
-RUN pip install --no-cache-dir -r requirements.txt psycopg2-binary
+RUN pip install --no-cache-dir --force-reinstall -r requirements.txt psycopg2-binary && \
+    pip uninstall redis -y && \
+    pip install --no-cache-dir redis
 
 EXPOSE 8000
-
-CMD ["python", "main.py"]
