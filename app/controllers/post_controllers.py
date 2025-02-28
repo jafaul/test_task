@@ -1,9 +1,9 @@
 from sqlalchemy.orm import Session
 
-from ..config import config
-from ..models.post import Post
-from ..models.user import User
-from ..schemas.post import PostCreate
+from config import config
+from models.post import Post
+from models.user import User
+from schemas.post import PostCreate
 import redis
 import jwt
 

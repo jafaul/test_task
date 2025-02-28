@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from fastapi.security import OAuth2PasswordBearer
-from ..database import get_db
-from ..controllers.post_controllers import add_post, get_posts, delete_post
-from ..schemas.post import PostCreate
+from database import get_db
+from controllers.post_controllers import add_post, get_posts, delete_post
+from schemas.post import PostCreate
 
 router = APIRouter()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")

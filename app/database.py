@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, MetaData, URL
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-from .config import config
+from config import config
 
 DATABASE_URL = URL.create(
     "postgresql",

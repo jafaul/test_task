@@ -4,7 +4,7 @@ WORKDIR /src
 
 COPY . .
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt psycopg2-binary
 
 EXPOSE 8000
 

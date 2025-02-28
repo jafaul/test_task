@@ -1,7 +1,7 @@
 from fastapi import FastAPI
+from routers import auth_routers, post_routers
 
-from . import routers
-from .database import Base, engine
+from database import Base, engine
 
 
 def create_app():
@@ -9,8 +9,8 @@ def create_app():
 
     Base.metadata.create_all(bind=engine)
 
-    app.include_router(routers.auth_routers.router, prefix="/auth", tags=["Authentication"])
-    app.include_router(routers.post_routers.router, prefix="/posts", tags=["Posts"])
+    app.include_router(auth_routers.router, prefix="/auth", tags=["Authentication"])
+    app.include_router(post_routers.router, prefix="/posts", tags=["Posts"])
 
     return app
 
