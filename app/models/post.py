@@ -2,7 +2,7 @@ from sqlalchemy import Integer, String, ForeignKey
 from sqlalchemy.orm import Mapped
 from sqlalchemy.testing.schema import mapped_column
 
-from app.database import Base
+from ..database import Base
 
 class Post(Base):
     __tablename__ = "posts"

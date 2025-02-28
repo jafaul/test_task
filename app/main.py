@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from app import routers
-from app.database import Base, engine
+from . import routers
+from .database import Base, engine
 
 
 def create_app():

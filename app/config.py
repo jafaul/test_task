@@ -15,8 +15,8 @@ class Settings(BaseSettings):
     SECRET_KEY: str = os.environ.get("SECRET_KEY", "")
     ALGORITHM: str = os.environ.get("ALGORITHM", "HS256")
 
-    REDIS_HOST: str = os.environ.get("REDIS_HOST", "localhost")
-    REDIS_PORT: int = os.environ.get("REDIS_PORT", 6379)
+    # REDIS_HOST: str = os.environ.get("REDIS_HOST", "localhost")
+    # REDIS_PORT: int = os.environ.get("REDIS_PORT", 6379)
 
     class Config:
         env_file = ".env"

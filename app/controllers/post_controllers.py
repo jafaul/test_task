@@ -1,14 +1,14 @@
 from sqlalchemy.orm import Session
 
-from app.config import config
-from app.models.post import Post
-from app.models.user import User
-from app.schemas.post import PostCreate
+from ..config import config
+from ..models.post import Post
+from ..models.user import User
+from ..schemas.post import PostCreate
 import redis
 import jwt
 
 
-redis_client = redis.Redis(host=config.REDIS_HOST, port=config.REDIS_PORT, db=0)
+redis_client = redis.Redis(host="localhost", port=6379, db=0, decode_responses=True)
 
 
 def add_post(db: Session, post: PostCreate, token: str):
